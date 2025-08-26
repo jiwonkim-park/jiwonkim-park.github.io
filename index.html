@@ -18,6 +18,20 @@
 		.intro {
 			padding-bottom: 2%; 
 		}
+		a.button {
+			text-decoration: none;
+			display: display-inline;          /* so padding works properly */
+      		padding: 8px 16px;
+      		background-color: #515a51;      /* blue background */
+      		color: white;                   /* white text */
+      		border-radius: 8px;             /* rounded corners */
+			border: 2px solid #273746;
+			font-size: 1.5vw;
+			font-weight: bold;
+		}
+		a.button:hover {
+			background-color: #5b5b66;
+		}
 		@media (max-width: 768px) {
   			/* For mobile phones: */
 			h1 {font-size: 6vw;}
@@ -45,7 +59,7 @@
 	  </div>
 	  <div class="intro">
 	  	<p>
-	  	I'm a second-year PhD student in CSE at the <b>University of
+	  	I'm a third-year PhD student in CSE at the <b>University of
 		Michigan</b>, advised by Professor <b><a
 		href="https://web.eecs.umich.edu/~paulgrub/">Paul Grubbs</a></b>. I work
 		on applied cryptography; I am interested in applying theoretical
@@ -58,9 +72,14 @@
 		<p>
 		I received a B.S. in Computer Science and Engineering and B.A. in History Education from Seoul National University.
 		</p>
+		<!--<p>
+		Please refer to my CV for more detailed information about me.
+		</p>-->
 		<p>
-		Please refer to my <b><a href="https://drive.google.com/file/d/1Nq_KWJH82OUFPQmChSQDdPjb2Sty-D3I/view?usp=sharing">CV</a></b> for more detailed information about me.
-		</p>
+		<a
+		 href="https://drive.google.com/file/d/1Nq_KWJH82OUFPQmChSQDdPjb2Sty-D3I/view?usp=sharing"
+		 class="button">CV</a>
+		 </p>
 	  </div>
       </header>
 
