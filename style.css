@@ -1,0 +1,254 @@
+/* Shared stylesheet for jiwonkim-park.github.io
+   Layout modelled on the al-folio theme: fixed top nav, floated profile photo
+   with an icon row, news table, and year-grouped publication list. */
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --text-light: #6b7280;
+  --theme: #273746;        /* hover / accent colour */
+  --on-theme: #ffffff;
+  --divider: rgba(0, 0, 0, 0.1);
+  --soft: #f5f6f6;         /* abstract background */
+  --nav-h: 57px;
+  --max-w: 930px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--nav-h);
+  font-family: Optima, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+main.container {
+  margin-top: 3rem;
+  flex: 1 0 auto;
+}
+
+a { color: inherit; text-decoration: underline; }
+a:hover { color: var(--theme); }
+
+h1 { font-size: 2rem; font-weight: 500; margin: 0 0 1rem; }
+h2 { font-size: 1.75rem; font-weight: 500; margin: 0 0 1rem; }
+h3 { font-size: 1.25rem; font-weight: 500; margin: 1.5rem 0 0.5rem; }
+p { margin: 0 0 1rem; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background-color: var(--bg);
+  opacity: 0.95;
+  border-bottom: 1px solid var(--divider);
+  z-index: 100;
+}
+.navbar .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.25rem;
+}
+.navbar-nav a {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-weight: 400;
+}
+.navbar-nav a.active { font-weight: 700; }
+
+/* ---------- Profile (photo + icon buttons) ---------- */
+.profile {
+  float: left;
+  width: 25%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+.profile figure { margin: 0; }
+.profile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+.profile-social { margin-top: 0.75rem; }
+.contact-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+}
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0;
+  text-decoration: none;
+}
+.contact-icons svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: currentColor;
+}
+
+.about-text p { text-align: left; }
+
+/* ---------- Experience (home page) ---------- */
+.about-experience { clear: both; margin-top: 3rem; }
+
+/* ---------- News ---------- */
+.about-news {
+  clear: both;
+  margin-top: 3rem;
+}
+.news .table-responsive {
+  max-height: 60vw;
+  overflow-y: auto;
+}
+.news table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.news th,
+.news td {
+  padding: 0.3rem;
+  vertical-align: top;
+  text-align: left;
+}
+.news th {
+  width: 20%;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- Publications ---------- */
+.publications-section { margin-top: 3rem; }
+.publications ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pub { margin-bottom: 1.25rem; }
+.pub .title { font-weight: 700; }
+.me {
+  font-style: normal;
+  border-bottom: 1px dashed var(--theme);
+}
+.pub .periodical { color: var(--text-light); }
+.pub .links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+.btn-sm,
+.pub .links a,
+.pub .links button {
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--theme);
+  border-radius: 0.25rem;
+  color: var(--theme);
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-sm:hover,
+.btn-sm[aria-expanded="true"],
+.pub .links a:hover,
+.pub .links button:hover,
+.pub .links button[aria-expanded="true"] {
+  background-color: var(--theme);
+  color: var(--on-theme);
+}
+.pub .abstract,
+.entry .details {
+  display: none;
+  margin-top: 0.6rem;
+  padding: 0.25rem 1rem;
+  border-left: 3px solid var(--theme);
+  background-color: var(--soft);
+  font-size: 0.9rem;
+}
+.pub .abstract.open,
+.entry .details.open { display: block; }
+.pub .abstract p,
+.entry .details p { margin: 0.6rem 0; }
+.entry .details ul { margin: 0.6rem 0; padding-left: 1.25rem; }
+.entry .details li { margin: 0.25rem 0; }
+
+/* ---------- Talks / Misc pages ---------- */
+.entry { margin-bottom: 1.25rem; }
+.entry .title { font-weight: 700; }
+.entry .meta { color: var(--text-light); }
+.entry .role .btn-sm {
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+.entry .role-block { margin-top: 0.75rem; }
+.entry ul { margin: 0.25rem 0 0; padding-left: 1.25rem; }
+.page-section { margin-bottom: 2.5rem; }
+.page-section > h2 { margin-top: 2rem; }
+.page-section:first-of-type > h2 { margin-top: 0; }
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--divider);
+  padding: 40px 0;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 575.98px) {
+  .profile {
+    float: none;
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  .profile figure,
+  .profile .contact-icons {
+    width: 60%;
+    max-width: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-brand { font-size: 1.1rem; }
+  .navbar-nav a { padding: 0.5rem 0.35rem; }
+  .news th { width: 28%; }
+  .news .table-responsive { max-height: 60vh; }
+}

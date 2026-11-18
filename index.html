@@ -1,263 +1,236 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <head>
-      <title>Jiwon Kim</title>
-   	  <style>
-		:root {
-			--bg: #f8f9f9;           /* page background */
-			--text: black;           /* body text */
-			--heading: #515a51;      /* name and section headings */
-			--link: #273746;         /* links */
-			--accent: #515a51;       /* buttons and abstract bar */
-			--accent-dark: #273746;  /* CV button border */
-			--accent-hover: #5b5b66; /* CV button hover */
-			--on-accent: white;      /* text on filled buttons */
-			--soft: #eef0ee;         /* abstract background */
-		}
-		body {	font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif; background-color: var(--bg); margin-left: 10%; margin-right: 10%;  margin-top: 2%; }
-		h1   {color: var(--heading); font-size: 3vw;}
-		h2	 {color: var(--heading); font-size: 2.5vw;}
-		p, ul    {color: var(--text); font-size: 1.5vw; line-height: 1.5em;}
-		a, u    {color: var(--link); }
-		img	 {border-radius: 30%; max-width: 15%;}
-		.me {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-		.intro {
-			padding-bottom: 2%; 
-		}
-		a.button {
-			text-decoration: none;
-			display: display-inline;          /* so padding works properly */
-      		padding: 0.5em 1.0em;
-      		background-color: var(--accent);
-      		color: var(--on-accent);
-      		border-radius: 0.5em;             /* rounded corners */
-			border: 2px solid var(--accent-dark);
-			font-size: 1.5vw;
-			font-weight: bold;
-		}
-		a.button:hover {
-			background-color: var(--accent-hover);
-		}
-		.paper-links {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.5em;
-			margin-top: 0.3em;
-		}
-		.paper-links a {
-			text-decoration: none;
-			padding: 0.1em 0.7em;
-			border: 1px solid var(--accent);
-			border-radius: 0.4em;
-			color: var(--accent);
-			font-size: 0.85em;
-		}
-		.paper-links a:hover {
-			background-color: var(--accent);
-			color: var(--on-accent);
-		}
-		.pub {
-			color: var(--text);
-			font-size: 1.5vw;
-			line-height: 1.5em;
-			margin: 1em 0;
-		}
-		.abstract {
-			margin-top: 1em;
-			padding: 0.2em 1em;
-			border-left: 3px solid var(--accent);
-			background-color: var(--soft);
-		}
-		.abstract p {
-			font-size: 0.9em;
-			margin: 0.6em 0;
-		}
-		@media (max-width: 768px) {
-  			/* For mobile phones: */
-			h1 {font-size: 6vw;}
-			h2 {font-size: 6vw;}
-			p, ul {font-size: 3vw;}
-			img {border-radius: 30%; max-width: 20%}
-			.pub {font-size: 3vw;}
-		}
-</style>
-      <script>
-		function toggleAbstract(link) {
-			var abs = link.closest('.pub').querySelector('.abstract');
-			abs.hidden = !abs.hidden;
-		}
-      </script>
-   </head> 
-   <body>
-      <header> 
-	  <div class="me">
-	  	<div class="name">
-      	<h1>Jiwon Kim</h1>
-		<p class="simple-intro">
-		CSE PhD Student
-		<br>
-		Email: jiwonkp at umich dot edu
-		</p>
-	  	
-		</div>
-	  	
-	  		<img src="jiwon_kim_casual.jpeg" alt="Photo of me">
-	  	
-	  </div>
-	  <div class="intro">
-	  	<p>
-	  	I'm a fourth-year Ph.D. candidate in CSE at the University of Michigan, advised by Professor <b><a
-                href="https://web.eecs.umich.edu/~paulgrub/">Paul Grubbs</a></b>.
-		I work on applied cryptography; my research focuses on building efficient privacy-preserving systems with zero-knowledge proofs. I solve subtle problems that arise when attempting to ensure privacy, integrity, and efficiency at the same time. Along the way, I also design cryptographic primitives that improve both security guarantees and practicality.
-		</p>
-		<p>
-		Before diving into a PhD program, I worked three and half years in the software industry, including Kakao Corporation, the largest social media company in South Korea with 60M+ users, and Samsung SDS.
-		</p>
-		<p>
-		I received a B.S. in Computer Science and Engineering and B.A. in History Education from Seoul National University.
-		</p>
-		<!--<p>
-		Please refer to my CV for more detailed information about me.
-		</p>-->
-		<p>
-		<a
-		 href="https://drive.google.com/file/d/1IwJrP6Km-lDk77SOjkMPEbwX29GZb0ac/view?usp=sharing"
-		 class="button">CV</a>
-		 </p>
-	  </div>
-      </header>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiwon Kim</title>
+  <meta name="author" content="Jiwon Kim">
+  <meta name="description" content="Jiwon Kim is a Ph.D. candidate in Computer Science and Engineering at the University of Michigan working on applied cryptography and zero-knowledge proofs.">
+  <link rel="canonical" href="https://jiwonkim-park.github.io/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		 <div class="contents">
-		 <h2>Publications</h2>
-			<div class="pub">
-			<b><u><a href="#" class="paper-title" onclick="toggleAbstract(this); return false;">Haechi: Simple Commitment-based Keyless In-person Verifiable Elections</a></u></b>
-			<br>
-			Jiwon Kim, Michael Naehrig, Bharath Namboothiry, Olivier Pereira, Josh Benaloh
-			<br>
-			In submission, 2026
-			<span class="paper-links">
-				<a href="https://eprint.iacr.org/2026/613">paper</a>
-				<a href="TODO-code-link">code</a>
-				<a href="TODO-slides-link">slides</a>
-			</span>
-			<div class="abstract" hidden>
-				<p>Verifiable election systems allow voters to verify that their secret ballots were accurately recorded and counted, while enabling anyone to verify the announced tallies. However, two practical obstacles stand between this guarantee and actual verification. First, public election records can be prohibitively large: for an election with one million ballots, deployed systems may publish more than 100GB of cryptographic data. Second, most existing systems protect ballot privacy through encryption, introducing key management&mdash;usually one of the most cumbersome and error-prone components of election administration.</p>
-				<p>We present Haechi, a keyless verifiable election scheme for in-person voting, based on cryptographic vector commitments rather than encryption. At the core of Haechi is a new zero-knowledge proof of ballot well-formedness based on Compressed &Sigma;-protocol theory. Our proof scheme proves the validity of an entire ballot using only a logarithmic number of group elements in the number of the ballot options. This allows all of a voter&rsquo;s selections to be encoded into a single vector commitment.</p>
-				<p>With this approach, Haechi reduces the data required for public verification by more than an order of magnitude compared to prior in-person verifiable election systems. Haechi thereby makes verifications for large-scale election considerably more practical. We also give a post-quantum instantiation of Haechi based on lattice commitments, which preserves the same keyless workflow at the cost of larger election records.</p>
-			</div>
-			</div>
-			<div class="pub">
-			<b><u><a href="#" class="paper-title" onclick="toggleAbstract(this); return false;">ALPACA: Anonymous Blocklisting with Constant-Sized Updatable Proofs</a></u></b>
-			<br>
-			Jiwon Kim, Abhiram Kothapalli, Orestis Chardouvelis, Riad Wahby, Paul Grubbs
-			<br>
-			IEEE Symposium on Security and Privacy 2025.
-			<span class="paper-links">
-				<a href="https://ia.cr/2025/767">paper</a>
-				<a href="https://github.com/jiwonkimpark/alpaca">code</a>
-				<a href="https://drive.google.com/file/d/1SrtIHLx8ya5li8jAe0bEOMqR8d6dQFfI/view?usp=share_link">slides</a>
-			</span>
-			<div class="abstract" hidden>
-				<p>In recent years, online anonymity has become increasingly important but is under threat due to the challenges of moderating anonymous spaces. A promising cryptographic solution, known as anonymous blocklisting, allows users to post anonymously while still enabling moderation. Moderation via anonymous blocklisting roughly works by requiring that when users post a message they attach a cryptographic proof that they did not author any posts on a &ldquo;blocklist&rdquo;.</p>
-				<p>Existing anonymous blocklisting schemes are unfortunately still far from achieving practical performance for large blocklists. This is essentially due to all prior works requiring a user to (cryptographically) reprocess blocklist entries many times. Relatedly, prior works have relatively high verification times and proof sizes.</p>
-				<p>In this work, we introduce ALPACA, the first anonymous blocklisting system with the property that a user only needs to do a constant amount of work per blocklist entry. Thus, our scheme has asymptotically optimal performance. Our scheme is also the first to have verification times and proof sizes that are independent of the number of blocklist entries.</p>
-				<p>Our key technique is a new variant of incrementally verifiable computation (IVC), designed to ensure anonymity. Along the way, we introduce new definitions to formally establish security. On a mid-range laptop, ALPACA&rsquo;s proof generation time is always 6.15 seconds and proof size is 25.6KBs. On a server, the verification time is always 400ms.</p>
-			</div>
-			</div>
-		 </div>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Jiwon Kim</a>
+        <ul class="navbar-nav">
+          <li><a class="active" href="index.html" aria-current="page">About</a></li>
+          <li><a href="talks.html">Talks</a></li>
+          <li><a href="misc.html">Misc</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-         
-		 <br>
-		 <div class="contents">
-		 <h2>Experience</h2>
-		 <p>
-		 <b>Microsoft Research</b>, Redmond, WA
-		 <br>
-		 Jun. 2026 - Aug. 2026, May. 2025 - Aug. 2025
-		 <br>
-		 Research Intern at Cryptography Group (mentored by Josh Benaloh and
-		 Michael Naehrig)
-		 <br>
-		 <i>Returned to the same team for a second internship in 2026</i>
-		 </p>
-		 <p>
-		 <b>Kakao Corp.</b>, Seongnam, Korea
-		 <br>
-		 May. 2021 - Jul. 2023
-		 <br>
-		 Software Engineer
-		 </p>
-		 <p>
-		 <b>Samsung SDS</b>, Seoul, Korea
-		 <br>
-		 Jan. 2020 - Apr. 2021
-		 <br>
-		 Researcher at Blockchain Research Lab
-		 </p>
-		 </div>
-		 <br>
-		 <div class="contents">
-		 <h2>Talks</h2>
-			<p>
-			<b>ALPACA: Anonymous Blocklisting with Constant-sized Updatable Proofs</b>		
-			<br>
-			UC Berkeley, Oct. 2025
-			<br>
-			University of Maryland, Sep. 2025
-			<p>
-			<b>Proven Approaches to Privacy, Confidentiality, and Security in Distributed Ledger Technologies</b>
-			<br>
-			Hyperledger Member Summit 2020
-			</p>
-		 </div>
-		 <br>
-		 <div class="contents">
-		 <h2>Awards and Honors</h2>
-		 <ul>
-			<li>Recognition for Exceptional Prelim Exams, May 2025 </li>
-			<li>Samsung SDS Research Student Scholarship ($4K) </li>
-  			<li>Samsung Convergence Software Course Scholarship ($1K) </li>
-  			<li>Merit-based Scholarship, Seoul National University ($3K Total)</li>
-		 </ul>
-		 </div>
-		 <br>
-		 <div class="contents">
-		 <h2>Patents</h2>
-			<p>
-			<b><u>Transaction Method and Apparatus in Blockchain Environment</u></b>
-			<br>
-			S. Lee, Y. Heo, Jiwon Kim, J. Lee
-			<br>
-			Korea Patent 10-2022-0160299, Dec 2022.
-			</p>
-			<p>
-			<b><u>Distributed Data Management Method Based on Blockchain Network and Apparatus Therefor</u></b>
-			<br>
-			J. Lee, J. Kim, Jiwon Kim, S. Lee, K. Lee
-			<br>
-			Korea Patent 10-2020-0093717, Jul 2020.
-			</p>
-			<p>
-			<b><u>Off-chain Data Sharing System and Method Thereof</u></b>
-			<br>
-			S. Bae, Jiwon Kim, S. Kang, H. Seo
-			<br>
-			Korea Patent 10-2020-0059823, May 2020.
-			</p>
-		 </div>
-         <br>
-      <br>
-	  <!--
-      <footer>
-         <a href=”twitter.com/author”>Twitter</a>
-         <a href=”facebook.com/author”>Facebook</a>
-         <a href=”instagram.com/author”>Instagram</a>
-      </footer>
-	  -->
-    </body>
+  <main class="container">
+    <article>
+
+      <div class="profile">
+        <figure>
+          <img src="jiwon_kim_casual_web.jpeg" alt="Photo of Jiwon Kim" width="800" height="1067" loading="eager">
+        </figure>
+        <div class="profile-social">
+          <div class="contact-icons">
+            <a href="https://drive.google.com/file/d/1SlA0h7GaxwhDK9VjOmzCxGPYtGr7rvNZ/view?usp=sharing" title="CV" aria-label="CV" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </a>
+            <a href="mailto:jiwonkp@umich.edu" title="Email" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="https://scholar.google.com/citations?user=R3R0p5MAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/jiwonkim-park/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p>
+          I'm a fourth-year Ph.D. candidate in CSE at the University of Michigan, advised by Professor <a href="https://web.eecs.umich.edu/~paulgrub/">Paul Grubbs</a>.
+          I work on applied cryptography; my research focuses on building efficient privacy-preserving systems with zero-knowledge proofs. I solve subtle problems that arise when attempting to ensure privacy, integrity, and efficiency at the same time. Along the way, I also design cryptographic primitives that improve both security guarantees and practicality.
+        </p>
+        <p>
+          Before diving into a PhD program, I worked three and half years in the software industry, including Kakao Corporation, the largest social media company in South Korea with 60M+ users, and Samsung SDS.
+        </p>
+        <p>
+          I received a B.S. in Computer Science and Engineering and B.A. in History Education from Seoul National University.
+        </p>
+      </div>
+
+      <section class="about-news" aria-labelledby="news-heading">
+        <h2 id="news-heading">News</h2>
+        <div class="news">
+          <div class="table-responsive">
+            <table>
+              <!-- Newest first. To add an item, copy a <tr> block to the top. -->
+              <tr>
+                <th scope="row">Jun 2026</th>
+                <td>Back at Microsoft Research in Redmond for a second summer internship with the Cryptography group.</td>
+              </tr>
+              <tr>
+                <th scope="row">Mar 2026</th>
+                <td>Our paper <a href="https://eprint.iacr.org/2026/613">Haechi: Simple Commitment-based Keyless In-person Verifiable Elections</a> is now on ePrint.</td>
+              </tr>
+              <tr>
+                <th scope="row">Oct 2025</th>
+                <td>Gave a talk on ALPACA at UC Berkeley.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sep 2025</th>
+                <td>Gave a talk on ALPACA at the University of Maryland.</td>
+              </tr>
+              <tr>
+                <th scope="row">May 2025</th>
+                <td>Started a research internship at Microsoft Research in Redmond, mentored by Josh Benaloh and Michael Naehrig.</td>
+              </tr>
+              <tr>
+                <th scope="row">May 2025</th>
+                <td>Our paper <a href="https://ia.cr/2025/767">ALPACA: Anonymous Blocklisting with Constant-Sized Updatable Proofs</a> appeared at IEEE S&amp;P 2025.</td>
+              </tr>
+              <tr>
+                <th scope="row">May 2025</th>
+                <td>Received a Recognition for Exceptional Prelim Exams.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <div class="entry">
+          <div class="title">University of Michigan, Ann Arbor, MI</div>
+          <div class="meta">Aug. 2023 &ndash; 2028 (Expected)</div>
+          <div class="role">Graduate Student Research Assistant <button type="button" class="btn-sm details-toggle" aria-expanded="false" aria-controls="exp-umich">Details</button></div>
+          <div class="details" id="exp-umich">
+            <ul>
+              <li>Built two anonymous moderation systems: (a) ALPACA achieves O(1) proof size and verifier time by designing an unlinkable variant of Incremental Verifiable Computation (IVC); (b) Centaur achieves optimal prover time across usage patterns by enabling dynamic verifiable user-server state synchronization via Non-uniform IVC; 630x speedup on the median Wikipedia workload.</li>
+              <li>Formalized security definitions with security games; proved security with non-trivial game hops and reductions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="title">Microsoft Research, Redmond, WA</div>
+          <div class="meta">Summers 2025 and 2026</div>
+          <div class="role">Research Intern, Cryptography Group <button type="button" class="btn-sm details-toggle" aria-expanded="false" aria-controls="exp-msr">Details</button></div>
+          <div class="details" id="exp-msr">
+            <p>Mentors: Josh Benaloh (2025&ndash;2026) and Michael Naehrig (2025)</p>
+            <ul>
+              <li>(2025) Developed a new zero-knowledge proof scheme that proves a ballot satisfies a voting rule based on the compressed-Sigma technique, enabling a new design of verifiable election with vector commitments.</li>
+              <li>(2025) For a voting with 1M voters and 100 candidates, reduced the bulletin board size from 120GB (SOTA) to 576MB.</li>
+              <li>(2026) Extended the verifiable election scheme to provide post-quantum integrity using BDLOP commitments and <i>d</i>-ary bootstrapping for commitment aggregation.</li>
+              <li>(2026) Developed a new approach to verifiable ranked-choice voting, reducing communication complexity from O(n<sup>3</sup>) in SOTA to <span style="white-space: nowrap">O(n log n)</span> for n candidates.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="title">Kakao Corp., Seongnam, Korea</div>
+          <div class="meta">May. 2021 &ndash; Jul. 2023</div>
+          <div class="role">Software Engineer, Wallet Service Development Part <button type="button" class="btn-sm details-toggle" aria-expanded="false" aria-controls="exp-kakao">Details</button></div>
+          <div class="details" id="exp-kakao">
+            <p>Kakao offers KakaoTalk, a Korea-based messenger app with 97% market share.</p>
+            <ul>
+              <li>Designed and implemented a new platform to securely issue, store, and present users&rsquo; identity information, including a prototype of anonymous credential.</li>
+              <li>Implemented features for issuing users&rsquo; Kakao public key certificates and generating users&rsquo; digital signatures; these are used for two-factor authentication in Korean government and online banking websites.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="title">Samsung SDS, Seoul, Korea</div>
+          <div class="meta">Jan. 2020 &ndash; Apr. 2021</div>
+          <div class="role">Researcher, Blockchain Research Lab <button type="button" class="btn-sm details-toggle" aria-expanded="false" aria-controls="exp-sds">Details</button></div>
+          <div class="details" id="exp-sds">
+            <ul>
+              <li>Invented and implemented a cryptographic scheme for blockchain that shares actual files only with the owners and stores metadata to the distributed ledger [Korea Patent 10-2020-0059823].</li>
+              <li>Modeled a real-time private blockchain banking system and improved the TPS by 33% through a batch processor and a database connection resource scheduler [Korea Patent 10-2022-0160299].</li>
+            </ul>
+          </div>
+          <div class="role-block">
+            <div class="meta">Jun. 2019 &ndash; Dec. 2019</div>
+            <div class="role">Student Researcher, Blockchain Research Lab <button type="button" class="btn-sm details-toggle" aria-expanded="false" aria-controls="exp-sds-student">Details</button></div>
+            <div class="details" id="exp-sds-student">
+              <ul>
+                <li>Surveyed blockchain consensus algorithms and proposed an evaluation standard that helps determine appropriate consensus algorithms for specific purposes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="publications-section" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">Publications</h2>
+        <div class="publications">
+
+          <ol>
+            <li class="pub">
+              <div class="title">Centaur: A Flexible and Efficient Stateful Anonymous Moderation System</div>
+              <div class="author"><em class="me">Jiwon Kim</em>, Abhiram Kothapalli, Paul Grubbs, Ian Miers, and Riad Wahby</div>
+              <div class="periodical"><em>In submission</em></div>
+            </li>
+            <li class="pub">
+              <div class="title">Haechi: Simple Commitment-based Keyless In-person Verifiable Elections</div>
+              <div class="author"><em class="me">Jiwon Kim</em>, Michael Naehrig, Bharath Namboothiry, Olivier Pereira, and Josh Benaloh</div>
+              <div class="periodical"><em>In submission</em></div>
+              <div class="links">
+                <button type="button" class="btn-sm abs-toggle" aria-expanded="false" aria-controls="abs-haechi">Abs</button>
+                <a href="https://eprint.iacr.org/2026/613" target="_blank" rel="noopener">PDF</a>
+                <a href="https://drive.google.com/file/d/1FR7nRtGaDJrYKLiqdKc96JKc7fpoAB1a/view?usp=sharing" target="_blank" rel="noopener">Slides</a>
+                <!-- Add once available:
+                <a href="CODE-URL" target="_blank" rel="noopener">Code</a>
+                -->
+              </div>
+              <div class="abstract" id="abs-haechi">
+                <p>Verifiable election systems allow voters to verify that their secret ballots were accurately recorded and counted, while enabling anyone to verify the announced tallies. However, two practical obstacles stand between this guarantee and actual verification. First, public election records can be prohibitively large: for an election with one million ballots, deployed systems may publish more than 100GB of cryptographic data. Second, most existing systems protect ballot privacy through encryption, introducing key management&mdash;usually one of the most cumbersome and error-prone components of election administration.</p>
+                <p>We present Haechi, a keyless verifiable election scheme for in-person voting, based on cryptographic vector commitments rather than encryption. At the core of Haechi is a new zero-knowledge proof of ballot well-formedness based on Compressed &Sigma;-protocol theory. Our proof scheme proves the validity of an entire ballot using only a logarithmic number of group elements in the number of the ballot options. This allows all of a voter&rsquo;s selections to be encoded into a single vector commitment.</p>
+                <p>With this approach, Haechi reduces the data required for public verification by more than an order of magnitude compared to prior in-person verifiable election systems. Haechi thereby makes verifications for large-scale election considerably more practical. We also give a post-quantum instantiation of Haechi based on lattice commitments, which preserves the same keyless workflow at the cost of larger election records.</p>
+              </div>
+            </li>
+            <li class="pub">
+              <div class="title">ALPACA: Anonymous Blocklisting with Constant-Sized Updatable Proofs</div>
+              <div class="author"><em class="me">Jiwon Kim</em>, Abhiram Kothapalli, Orestis Chardouvelis, Riad Wahby, and Paul Grubbs</div>
+              <div class="periodical"><em>In IEEE Symposium on Security and Privacy (S&amp;P)</em>, 2025</div>
+              <div class="links">
+                <button type="button" class="btn-sm abs-toggle" aria-expanded="false" aria-controls="abs-alpaca">Abs</button>
+                <a href="https://ia.cr/2025/767" target="_blank" rel="noopener">PDF</a>
+                <a href="https://github.com/jiwonkimpark/alpaca" target="_blank" rel="noopener">Code</a>
+                <a href="https://drive.google.com/file/d/1SrtIHLx8ya5li8jAe0bEOMqR8d6dQFfI/view?usp=share_link" target="_blank" rel="noopener">Slides</a>
+              </div>
+              <div class="abstract" id="abs-alpaca">
+                <p>In recent years, online anonymity has become increasingly important but is under threat due to the challenges of moderating anonymous spaces. A promising cryptographic solution, known as anonymous blocklisting, allows users to post anonymously while still enabling moderation. Moderation via anonymous blocklisting roughly works by requiring that when users post a message they attach a cryptographic proof that they did not author any posts on a &ldquo;blocklist&rdquo;.</p>
+                <p>Existing anonymous blocklisting schemes are unfortunately still far from achieving practical performance for large blocklists. This is essentially due to all prior works requiring a user to (cryptographically) reprocess blocklist entries many times. Relatedly, prior works have relatively high verification times and proof sizes.</p>
+                <p>In this work, we introduce ALPACA, the first anonymous blocklisting system with the property that a user only needs to do a constant amount of work per blocklist entry. Thus, our scheme has asymptotically optimal performance. Our scheme is also the first to have verification times and proof sizes that are independent of the number of blocklist entries.</p>
+                <p>Our key technique is a new variant of incrementally verifiable computation (IVC), designed to ensure anonymity. Along the way, we introduce new definitions to formally establish security. On a mid-range laptop, ALPACA&rsquo;s proof generation time is always 6.15 seconds and proof size is 25.6KBs. On a server, the verification time is always 400ms.</p>
+              </div>
+            </li>
+          </ol>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">&copy; Copyright 2026 Jiwon Kim.</div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.abs-toggle, .details-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var box = document.getElementById(btn.getAttribute('aria-controls'));
+        var open = box.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  </script>
+</body>
 </html>
